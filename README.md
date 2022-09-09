@@ -30,8 +30,11 @@ pip install -r requirements.txt
 
 ### Preprocessing
 ```bash
-python preprocess/preprocess_data.py --input_path="totto_data/totto_dev_data.jsonl" --output_path="totto_data/totto_dev_data_linearized.jsonl"
-python preprocess/json_to_csv.py -i totto_data/totto_dev_data_linearized.jsonl -o totto_data/totto_dev_data.csv
+python preprocess/preprocess_data.py --input_path="totto_data/totto_dev_data.jsonl" --output_path="totto_data/dev_linearized.jsonl"
+python preprocess/json_to_csv.py -i totto_data/dev_linearized.jsonl -o totto_data/dev.csv
+
+python preprocess/preprocess_data.py --input_path="totto_data/totto_train_data.jsonl" --output_path="totto_data/train_linearized.jsonl"
+python preprocess/json_to_csv.py -i totto_data/train_linearized.jsonl -o totto_data/train.csv
 ```
 
 ## Run
