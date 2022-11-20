@@ -6,6 +6,7 @@ Code for our paper [Robust (Controlled) Table-to-Text Generation with Structure-
   - [Requirements](#requirements)
   - [Data](#data)
   - [Run](#run)
+  - [Robustness Evaluation](#robustness-evaluation)
   - [Citation](#citation)
 
 ## Overview
@@ -45,6 +46,9 @@ bash run.sh
 ### Evaluation
 The BLEU score printed during training is only for reference. 
 To get accurate scores, please use the [official evaluation tool](https://github.com/google-research/language/tree/master/language/totto) or [submit the predictions](https://forms.gle/AcF9TRqWrPhPzztt7) to the official leaderboard.
+
+## Robustness Evaluation
+To get the hard version of ToTTo introduced in section 3.3 of our paper, a simple way is to permute the row/column indexes. Speciafically, add the table transformation code at the end of the [get_highlighted_subtable](https://github.com/luka-group/Lattice/blob/3cb2dab5769052e189a16f98022278cc4e9e12f8/preprocess/preprocess_utils.py#L64) function.
 
 ## Citation
 Please cite our paper if you use Lattice in your work:
