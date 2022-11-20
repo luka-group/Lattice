@@ -23,13 +23,13 @@ pip install -r requirements.txt
 
 ## Data
 
-### Download [ToTTo dataset](https://github.com/google-research-datasets/totto)
+Download [ToTTo dataset](https://github.com/google-research-datasets/totto)
 ```bash
  wget https://storage.googleapis.com/totto-public/totto_data.zip
  unzip totto_data.zip
 ```
 
-### Preprocessing
+Preprocessing
 ```bash
 python preprocess/preprocess_data.py --input_path="totto_data/totto_dev_data.jsonl" --output_path="totto_data/dev_linearized.jsonl"
 python preprocess/json_to_csv.py -i totto_data/dev_linearized.jsonl -o totto_data/dev.csv
