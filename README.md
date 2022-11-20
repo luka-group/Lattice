@@ -42,16 +42,14 @@ python preprocess/json_to_csv.py -i totto_data/train_linearized.jsonl -o totto_d
 ```bash
 bash run.sh
 ```
-
-### Evaluation
-The BLEU score printed during training is only for reference. 
+NOTICE: The BLEU score printed during training is only for reference. 
 To get accurate scores, please use the [official evaluation tool](https://github.com/google-research/language/tree/master/language/totto) or [submit the predictions](https://forms.gle/AcF9TRqWrPhPzztt7) to the official leaderboard.
 
 ## Robustness Evaluation
 To get the hard version of ToTTo introduced in section 3.3 of our paper, a simple way is to perturb the row/column indexes of `highlighted_cell` at the end of the [get_highlighted_subtable](https://github.com/luka-group/Lattice/blob/3cb2dab5769052e189a16f98022278cc4e9e12f8/preprocess/preprocess_utils.py#L64) function. We consider the following three content-neutral table transformations:
 * row shuffling -- map row indexes to a different permutation;
 * column shuffling -- map column indexes to a different permutation;
-* table transpose -- swap row and column indexes.
+* table transposing -- swap row and column indexes.
 
 ## Citation
 Please cite our paper if you use Lattice in your work:
