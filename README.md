@@ -56,9 +56,9 @@ After running the script, you will get trained model weights, training logs, and
 Note that the evaluation process for each checkpoint during training are simplified for efficiency, so the BLEU scores are lower than the final evaluation results. You can change the setting according to [this post](https://discuss.huggingface.co/t/evaluation-results-metric-during-training-is-different-from-the-evaluation-results-at-the-end/15401). To get accurate scores, please use the official [evaluation tool](https://github.com/google-research/language/tree/master/language/totto). You can also submit your predictions to the [official leaderboard](https://github.com/google-research-datasets/totto#leaderboard) through [this form](https://forms.gle/AcF9TRqWrPhPzztt7).
 
 ## Robustness Evaluation
-To get the hard version of ToTTo introduced in section 3.3 of our paper, a simple way is to perturb the row/column indexes of `highlighted_cell` at the end of the [get_highlighted_subtable](https://github.com/luka-group/Lattice/blob/3cb2dab5769052e189a16f98022278cc4e9e12f8/preprocess/preprocess_utils.py#L64) function. We apply the following three content-neutral table transformations:
-* row shuffling -- map row indexes to a different permutation;
-* column shuffling -- map column indexes to a different permutation;
-* table transposing -- swap row and column indexes.
+To get the hard version of ToTTo introduced in section 3.3 of our paper, a simple way is to perturb the row/column indices of `highlighted_cell` at the end of the [get_highlighted_subtable](https://github.com/luka-group/Lattice/blob/3cb2dab5769052e189a16f98022278cc4e9e12f8/preprocess/preprocess_utils.py#L64) function. We apply the following three content-neutral table transformations:
+* row shuffling -- map row indices to a different permutation;
+* column shuffling -- map column indices to a different permutation;
+* table transposing -- swap row and column indices.
 
 
